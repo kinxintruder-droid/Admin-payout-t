@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wallet - Scorpio Octavious Vibe V2</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+</head>
+<body>
+<h2>My Wallet</h2>
+<p>Balance: R<span id="walletBalance">0</span></p>
+<p>Total Earnings: R<span id="totalEarnings">0</span></p>
+<ul id="earningHistory"></ul>
+
+<h2>Bank Transfer Deposit</h2>
+<p>Send payment using your bank app and upload proof below.</p>
+<p>
+Bank Name: YOUR BANK<br>
+Account Name: Octavious Gaonakgoro<br>
+Account Number: XXXXXXXX<br>
+Branch Code: XXXXX<br>
+Reference: Use your email or username
+</p>
+<input type="number" id="amount" placeholder="Amount sent">
+<input type="file" id="proof">
+<button onclick="submitProof()">Upload Proof</button>
+
+<h2>Withdraw via Bank Transfer</h2>
+<input type="text" id="bankName" placeholder="Bank Name">
+<input type="text" id="accountName" placeholder="Account Holder Name">
+<input type="text" id="accountNumber" placeholder="Account Number">
+<input type="text" id="branchCode" placeholder="Branch Code">
+<input type="number" id="withdrawAmount" placeholder="Amount">
+<button onclick="requestWithdrawal()">Request Withdrawal</button>
+
+<script src="wallet.js"></script>
+</body>
+</html>
